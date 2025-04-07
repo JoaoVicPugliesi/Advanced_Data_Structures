@@ -6,12 +6,14 @@ interface INode {
 
 export class Node implements INode {
 
-    public readonly value: number;
-    public readonly left: INode | null;
-    public readonly right: INode | null;
+    public value: number;
+    public left: INode | null;
+    public right: INode | null;
+
     constructor(value: number) {
         this.value = value;
         this.left = null;
         this.right = null
     }
 }
+

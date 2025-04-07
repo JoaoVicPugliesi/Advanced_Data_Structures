@@ -4,7 +4,7 @@
   "description": "Resolvendo exercícios de estrutura de dados avançada",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "tsx src/index.ts"
   },
   "keywords": [],
   "author": "João Pugliesi",
@@ -13,5 +13,9 @@
     "@types/node": "^22.14.0",
     "tsx": "^4.19.3",
     "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "@types/prompt-sync": "^4.2.3",
+    "prompt-sync": "^4.2.0"
   }
 }
