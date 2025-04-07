@@ -8,7 +8,7 @@ export class IOrderServiceImplementation implements IOrderService {
     const leftValues = this.preOrder(root.left);
     const rightValues = this.preOrder(root.right);
 
-    const result = [root.value, ...leftValues, ...rightValues];
+    const result = [ root.value,  ...leftValues, ...rightValues];
 
     console.log(result.filter((i) => !Number.isNaN(i))); 
 

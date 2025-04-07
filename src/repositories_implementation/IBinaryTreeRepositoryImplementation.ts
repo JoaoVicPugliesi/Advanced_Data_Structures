@@ -2,11 +2,7 @@ import { Prompt } from 'prompt-sync';
 import { Node } from '../entities/Node';
 import { IBinaryTreeRepository } from '../repositories/IBinaryTreeRepository';
 
-export class IBinaryTreeRepositoryImplementation
-  implements IBinaryTreeRepository
-{
-  private isBuilding: boolean = true;
-
+export class IBinaryTreeRepositoryImplementation implements IBinaryTreeRepository {
   build(prompt: Prompt): Node {
     const rootValue = prompt('Choose The Root Value: ');
     const rootNode = new Node(+rootValue);
@@ -15,39 +11,20 @@ export class IBinaryTreeRepositoryImplementation
   }
 
   private buildRecursive(currentNode: Node, prompt: Prompt): void {
-    while (this.isBuilding) {
-      console.log('1 - Add Node');
-      console.log('2 - Finish Adding');
-      let answer: string;
-      
-      do {
-        answer = prompt('Answer: ');
-      } while (!['1', '2'].includes(answer));
-      
-      if (answer === '1') {
+    console.log(`Current Node: ${currentNode.value}`);
+    
+    const leftValue = prompt('Left Node Value (enter to skip): ');
+    if (leftValue !== '') {
+      const leftNode = new Node(+leftValue);
+      currentNode.left = leftNode;
+      this.buildRecursive(leftNode, prompt);
+    }
 
-        let leftNodeValue = '';
-        let rightNodeValue = '';
-
-        do {
-          leftNodeValue = prompt('Left Node Value: ');
-        } while (leftNodeValue === '');
-
-        do {
-          rightNodeValue = prompt('Right Node Value: ');
-        } while (rightNodeValue === '');
-
-        const leftNode = new Node(+leftNodeValue);
-        const rightNode = new Node(+rightNodeValue);
-
-        currentNode.left = leftNode;
-        currentNode.right = rightNode;
-
-        this.buildRecursive(leftNode, prompt);
-        this.buildRecursive(rightNode, prompt);
-      }
-
-      if (answer === '2') this.isBuilding = false;
+    const rightValue = prompt('Right Node Value (enter to skip): ');
+    if (rightValue !== '') {
+      const rightNode = new Node(+rightValue);
+      currentNode.right = rightNode;
+      this.buildRecursive(rightNode, prompt);
     }
   }
 }

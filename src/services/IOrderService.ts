@@ -1,7 +1,7 @@
 import { Node } from "../entities/Node";
 
 export interface IOrderService {
-    preOrder(root: Node): number[] | null;
-    inOrder(root: Node): number[] | null;
-    postOrder(root: Node): number[] | null;
+    preOrder(root: Node | null): number[];
+    inOrder(root: Node | null): number[];
+    postOrder(root: Node | null): number[];
 }

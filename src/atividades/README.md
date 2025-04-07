@@ -1,4 +1,4 @@
 ### Observações
 
-Aqui uso o index apenas como um composer ou factory (Os dois termos me parecem corretos).
+Em todas as atividades eu uso o index apenas como um composer ou factory (Os dois termos me parecem corretos).
 Basicamente ele é responsável por unir o quebra cabeça de cada caso de uso. Nesse caso não uso o Termo caso de uso em nenhum lugar... pois os mesmos já estão sendo referenciados dentro da entidade BinaryTree.js. Já que trabalhei com Dependency Inversion Principle (DIP) e Single Responsibility Principle (SRP) as classes passam a ter dependências, ou seja, se torna complexo instancia-las rapidamente. É por isso que usamos Factories. Dava pra expandir ainda + o conceito usando decorators (Open Close Principle (OCP)), enfim.
