@@ -4,6 +4,8 @@
 
 1 - Clone o Repo
 2 - Rode npm install
+3 - Ache a File src/index.ts
+3 - Rode npm run dev
 
 ### Razões
 
@@ -22,7 +24,7 @@ Irei usar OOP e alguns principios de S.O.L.I.D caso haja necessidade. O que quer
 
 ### 1 - Árvore Binária (18 de Fev a 25 de Fev)
 
-Desc - Implementar uma árvore binária em Python, permitindo a inserção de nós e a exibição da árvore em diferentes ordens de percurso (pré-ordem, em-ordem e pós-ordem).
+Desc - Implementar uma árvore binária em Python (🫣), permitindo a inserção de nós e a exibição da árvore em diferentes ordens de percurso (pré-ordem, em-ordem e pós-ordem).
 
 ### 2 - Teste Estrutura de Dados (25 de Março)
 

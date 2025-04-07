@@ -12,7 +12,7 @@ export class BinaryTree {
   ) {}
 
   builder() {
-    const binaryTree: Node = this.iBinaryTreeRepository.build(this.prompt);
+    const root: Node = this.iBinaryTreeRepository.build(this.prompt);
     
     while(this.isOrdering) {
 
@@ -27,9 +27,9 @@ export class BinaryTree {
         order = this.prompt('Order: ');
       } while(!(['1', '2', '3'].includes(order)));
 
-      if(order === '1') this.iOrderService.preOrder(binaryTree);
-      if(order === '2') this.iOrderService.inOrder(binaryTree);
-      if(order === '3') this.iOrderService.postOrder(binaryTree);
+      if(order === '1') this.iOrderService.preOrder(root);
+      if(order === '2') this.iOrderService.inOrder(root);
+      if(order === '3') this.iOrderService.postOrder(root);
       if(order === '4') this.isOrdering = false;
 
     }

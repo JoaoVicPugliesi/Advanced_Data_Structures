@@ -1,10 +1,5 @@
-import { BinaryTree } from "./entities/BinaryTree";
-import PromptSync from "prompt-sync";
-import { IBinaryTreeRepositoryImplementation } from "./repositories_implementation/IBinaryTreeRepositoryImplementation";
-const prompt = PromptSync()
+// Atividade 1 - Binary Tree
 
-const iRootRepository = new IBinaryTreeRepositoryImplementation();
-const root = new BinaryTree(iRootRepository, prompt);
+import { binaryTree } from "./atividades/BinaryTree";
 
-root.builder();
-
+binaryTree.builder();
