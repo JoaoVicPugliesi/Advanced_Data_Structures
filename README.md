@@ -16,6 +16,8 @@ https://www.amazon.com.br/Entendendo-Algoritmos-Ilustrado-Programadores-Curiosos
 Enfim, resolverei todas as atividades que o senhor passou durante o período até então.
 Irei usar Typescript, porém... haverá uma versão em Python caso o senhor prefira.
 
+Irei usar OOP e alguns principios de S.O.L.I.D caso haja necessidade. O que quero dizer é que seria interessante trazer essas problemáticas para uma perspectiva real de software. Além de aplicar design patters (Small-Commits, Repositories, Dependency Injection etc...) e evitar anti-patterns (God Class, Speculative Generality etc...)
+
 ### Atividades
 
 ### 1 - Árvore Binária (18 de Fev a 25 de Fev)
@@ -49,3 +51,13 @@ Saída: [5, 15]
 Desc - Dado o nó raiz de uma árvore binária, retorne sua profundidade máxima.
 
 A profundidade máxima de uma árvore binária é o número de nós ao longo do caminho mais longo do nó raiz até o nó folha mais distante.
+
+mplemente uma função para calcular a profundidade máxima da árvore binária. Além disso, crie funções que determinem a quantidade máxima de nós percorridos em outras ordens de travessia, como:
+
+Pré-ordem (preorder)
+
+Em ordem (inorder)
+
+Pós-ordem (postorder)
+
+Depois, explique o raciocínio que o levou a resolução dessa tarefa.
