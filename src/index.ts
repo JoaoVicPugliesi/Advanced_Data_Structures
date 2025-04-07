@@ -1,11 +1,10 @@
-import { Root } from "./entities/ts/Root";
+import { BinaryTree } from "./entities/BinaryTree";
 import PromptSync from "prompt-sync";
-import { IRootRepositoryImplementation } from "./repositories_implementation/IRootRepositoryImplementation";
+import { IBinaryTreeRepositoryImplementation } from "./repositories_implementation/IBinaryTreeRepositoryImplementation";
 const prompt = PromptSync()
 
-const iRootRepository = new IRootRepositoryImplementation();
-const root = new Root(iRootRepository, prompt);
+const iRootRepository = new IBinaryTreeRepositoryImplementation();
+const root = new BinaryTree(iRootRepository, prompt);
 
-const tree = root.make();
+root.builder();
 
-console.log(tree);

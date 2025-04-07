@@ -14,7 +14,7 @@ Além disso também tenho lido esse livro que foi recomendação de um amigo
 https://www.amazon.com.br/Entendendo-Algoritmos-Ilustrado-Programadores-Curiosos/dp/8575225634
 
 Enfim, resolverei todas as atividades que o senhor passou durante o período até então.
-Irei usar Typescript, porém... haverá uma versão em Python caso o senhor prefira.
+Irei usar Typescript, porém... posso realizar uma versão em Python caso o senhor queira.
 
 Irei usar OOP e alguns principios de S.O.L.I.D caso haja necessidade. O que quero dizer é que seria interessante trazer essas problemáticas para uma perspectiva real de software. Além de aplicar design patters (Small-Commits, Repositories, Dependency Injection etc...) e evitar anti-patterns (God Class, Speculative Generality etc...)
 
