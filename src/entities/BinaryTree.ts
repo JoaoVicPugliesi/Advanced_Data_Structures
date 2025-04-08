@@ -33,7 +33,10 @@ export class BinaryTree {
       if (order === '2') this.iOrderService.inOrder(root);
       if (order === '3') this.iOrderService.postOrder(root);
       if (this.iDepthService) {
-        if (order === '4') this.iDepthService.maxDepth(root);
+        if (order === '4') {
+          const depth: number = this.iDepthService.maxDepth(root);
+          console.log(depth);
+        }
       }
       if (order === '5') this.isOrdering = false;
     }
