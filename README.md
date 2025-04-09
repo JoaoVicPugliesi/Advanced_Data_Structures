@@ -20,6 +20,14 @@ Irei usar Typescript, porém... posso realizar uma versão em Python caso o senh
 
 Irei usar OOP e alguns principios de S.O.L.I.D caso haja necessidade. O que quero dizer é que seria interessante trazer essas problemáticas para uma perspectiva real de software. Além de aplicar design patters (Small-Commits, Repositories, Dependency Injection etc...) e evitar anti-patterns (God Class, Speculative Generality etc...)
 
+### Explicações
+
+Em relação ao Design, acabei escolhendo o Domain Driving Design (DDD) que busca validar a lógica de negócio (Camada domínio) desacoplada de qualquer IMPLEMENTAÇÃO. A primeira coisa a se realizar nesse caso é a CAPTURA dos Objetos de Valor (Entities) que derivam da descrição que um Domain Expert (Cliente) indiretamente compartilharia ao descrever as razões pelas quais ele enxerga a necessidade da construção de uma plataforma (Software). Após indentificarmos os objetos de valor precisamos mensurar o que chamamos de casos de uso, que se baseam nas possíveis ações em que cada Entidade possa vir a ter no nosso sistema, ou seja, como as Entidades se relacionam e como cada relação demonstra peculiaridades que a separa das demais. 
+
+Na busca por alcançar esse desfecho (Separação da camada Domínio e Infra) usamos princípios S.O.L.I.D e alguns design patterns que possibilitam separarmos responsabilidades de maneira coesa e clara (Single Responsability Principle (S do Solid)) como no caso em que na Entidade Binary Tree apenas recebe as Dependências (Contratos) e ganha acesso a diversos metódos sem se preocupar com a real implementação ou mesmo sem precisar instanciar tais contratos (Classes) (Ps. Claro, não segui a risca... pois como expliquei na introdução o ideal é sapararmos em casos de usos e enfim... nesse caso o único caso aparece dentro da Entidade em si). Além disso, ao invés de injetar a implementação em si, usei do Dependency Inversion Principle (D do Solid) para não prender a minha entidade a uma única forma de implementar os diferentes contratos envolvendo a entidade BinaryTree (A prova disso é que dentro de services/IOrderService.ts eu apenas defino o contrato com três methods correspondentes a aquele contexto e injeto ele no constructor da minha entidade, sem me preocupar com a real implementação, pois, a partir do momento em que minha lógica de negócio se encontra definida, não importa se vou implementar as diferentes ordenações possíveis de maneira recursiva ou iterativa). Além disso uso alguns Design Patterns como Repositories que basicamente são pontes de acesso aos dados (Faria + sentido caso eu usasse um banco de dados). Factory na hora de compor as classes, etd...
+
+ps. Não cumpri a risca o DDD... pois, nesse caso o projeto não precisaria ser escalável em sua totalidade.
+
 ### Atividades
 
 ### 1 - Árvore Binária (18 de Fev a 25 de Fev)
